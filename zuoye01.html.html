@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		请输入您的身高：<input type="text" id="hei"/><br />
+		请输入您的体重：<input type="text" id="wei"/><br />
+		<input type="button" value="点击计算" onclick="txt()"/>
+		<input type="text" id="result"/>
+	</body>
+</html>
+<script type="text/javascript">
+	function txt(){
+		//获取值
+		var hei=parseFloat(document.getElementById("hei").value);
+		var wei=parseFloat(document.getElementById("wei").value);
+		var result="";
+		//判断
+		if(isNaN(hei)&&isNaN(wei)){
+			result="请输入数字";
+		}else{BMI=(hei-108)*2
+			if(wei>BMI+5){result="超重";}
+			else if(wei<BMI-5){result="偏轻";}
+			else{result="标准";}	
+		}
+		//赋值
+		document.getElementById("result").value = result;	
+	}
+</script>
